@@ -1,0 +1,15 @@
+{
+  "name": "expresswiki",
+  "version": "0.1",
+  "description": "Free wiki using node.js",
+  "main": "src/main.js",
+  "scripts": {
+    "test": "node ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "GNU-GPL-v3",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
