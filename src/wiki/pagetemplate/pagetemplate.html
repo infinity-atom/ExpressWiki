@@ -3,9 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Article Name | ExpressWiki</title>
+    <title>{{ArticleName}} | ExpressWiki</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function toggleMobileMenu() {
+            document.querySelector(".header-mobile-links").style.display = document.querySelector(".header-mobile-links").style.display == "flex" ? "none" : "flex";
+        }
+    </script>
 </head>
 <body>
-    
+    <div class="header">
+        <div class="header-mobile-menu-toggle hmargin" onclick="toggleMobileMenu();">
+            •••
+        </div>
+        <div class="header-logo hmargin">
+            <img src="logo.png" alt="ExpressWiki Default Template 300x300px">
+        </div>
+        <div class="header-logo-text hmargin">
+            ExpressWiki Template
+        </div>
+        <div class="header-desktop-menu">
+            <a class="header-desktop-menu-link lmargin" href="/wiki/Main Page">Main Page</a>
+            <a class="header-desktop-menu-link" href="/internal/Search">Search</a>
+        </div>
+    </div>
+    <div class="header-mobile-links">
+        <img src="logo.png" width="100" alt="ExpressWiki Default Template 300x300px">
+        <br>
+        <a class="header-mobile-menu-link dmargin" href="#" onclick="toggleMobileMenu();">Close Menu</a>
+        <a class="header-mobile-menu-link" href="/wiki/Main Page">Main Page</a>
+        <a class="header-mobile-menu-link" href="/internal/Search">Search</a>
+    </div>
+    <div class="wiki-body">
+        <h1 class="wiki-body-title">{{ArticleName}}</h1>
+        <div class="wiki-body-hr"></div>
+        <em>From ExpressWiki Template</em>
+        <br>
+        <br>
+        <div class="wiki-body-contents">
+            {{ArticleContents}}
+        </div>
+    </div>
+    <div class="end-footer">
+        This is an template created for ExpressWiki. You can add stuff such as license information in this footer.<br>
+        <!-- Please do not remove this. ExpressWiki is free and open source and this helps get more users every day. -->
+        <div style="background-color: rgb(182, 182, 182); width: min-content; height: min-content; padding: 3px; border-radius: 5px; font-size: 6pt;">
+            <span style="font-size: 6pt;">Powered by</span><br>
+            <span style="font-size: 10pt;"><a href="https://github.com/infinity-atom/ExpressWiki">ExpressWiki</a></span>
+            
+        </div>
+    </div>
 </body>
 </html>
