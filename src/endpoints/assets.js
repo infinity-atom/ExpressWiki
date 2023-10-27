@@ -9,8 +9,7 @@ module.exports = {
             res.status(200);
             res.sendFile(path.join(__dirname, "../wiki/assets/" + req.params.assetid));
         } else {
-            res.status(404);
-            res.send("Error 404: Not Found");
+            res.sendStatus(404);
         }
     }
 }

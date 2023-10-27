@@ -5,6 +5,16 @@ It includes markdown help
 !! Header 2
 !!! Header 3
 
-`code block`
+`code line`
 
-_italic_ *bold* *_bold italic_* ~strikethrough~
+```
+code block
+```
+
+_italic_ *bold* ~strikethrough~ *_~use multiple to add more than one format~ _* 
+
+[link to page] [link to page with custom text](Hello)
+
+[another link to page]
+
+Information (This is a refrence)
