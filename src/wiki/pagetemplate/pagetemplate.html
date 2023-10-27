@@ -5,7 +5,141 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ArticleName}} | ExpressWiki</title>
 
-    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .header {
+            background-color: rgb(209, 209, 209);
+            padding: 10px;
+
+            display: flex;
+            align-items: center;
+        }
+
+        .hmargin {
+            margin-right: 10px;
+        }
+
+        .lmargin {
+            margin-right: 20px;
+        }
+
+        .dmargin {
+            margin-bottom: 20px;
+        }
+
+        .header-logo, .header-logo > img {
+            width: 50px;
+            aspect-ratio: 1/1;
+
+            display: flex;
+            align-items: center;
+        }
+
+        .header-logo-text {
+            font-size: 16pt;
+
+            display: flex;
+            align-items: center;
+        }
+
+        .header-mobile-menu-toggle {
+            width: 50px;
+            aspect-ratio: 1/1;
+
+            border: 1px solid rgb(63, 63, 63);
+            border-radius: 50%;
+
+            box-shadow: 0px 0px 10px 2px rgba(75, 75, 75, 0.72) inset;
+            -webkit-box-shadow: 0px 0px 10px 2px rgba(75, 75, 75, 0.72) inset;
+            -moz-box-shadow: 0px 0px 10px 2px rgba(75, 75, 75, 0.72) inset;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            font-size: 16pt;
+            user-select: none;
+        }
+
+        .header-desktop-menu {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border: 1px solid rgb(63, 63, 63);
+            border-radius: 10px;
+
+            height: 50px;
+            padding-left: 10px;
+            padding-right: 10px;
+
+            box-shadow: 0px 0px 10px 2px rgba(75, 75, 75, 0.72) inset;
+            -webkit-box-shadow: 0px 0px 10px 2px rgba(75, 75, 75, 0.72) inset;
+            -moz-box-shadow: 0px 0px 10px 2px rgba(75, 75, 75, 0.72) inset;
+        }
+
+        .header-desktop-menu-link, .header-mobile-menu-link {
+            text-decoration: none;
+            color: black;
+            
+        }
+
+        .header-mobile-menu-link {
+            font-size: 16pt;
+        }
+
+        .header-mobile-links {
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            width: 100vw;
+            height: 100vh;
+            
+            padding: 20px;
+
+            background-color: rgb(181, 181, 181);
+            box-sizing: border-box;
+
+            display: none;
+            flex-direction: column;
+            z-index: 10000;
+        }
+
+        @media(min-width: 500px){
+            .header-mobile-menu-toggle {
+                display: none;
+            }
+        }
+
+        @media(max-width: 500px){
+            .header-desktop-menu {
+                display: none;
+            }
+        }
+
+        .wiki-body {
+            margin: 8px;
+        }
+
+        .wiki-body-title {
+            margin-bottom: 0px;
+        }
+
+        .wiki-body-hr {
+            border-bottom: 1px solid rgb(116, 116, 116);
+            margin-top: 4px;
+            margin-bottom: 4px;
+        }
+
+        .end-footer {
+            background-color: rgb(209, 209, 209);
+            padding: 8px;
+        }
+    </style>
     <script>
         function toggleMobileMenu() {
             document.querySelector(".header-mobile-links").style.display = document.querySelector(".header-mobile-links").style.display == "flex" ? "none" : "flex";
@@ -18,7 +152,7 @@
             •••
         </div>
         <div class="header-logo hmargin">
-            <img src="logo.png" alt="ExpressWiki Default Template 300x300px">
+            <img src="/content/assets/logo.png" alt="ExpressWiki Default Template 300x300px">
         </div>
         <div class="header-logo-text hmargin">
             ExpressWiki Template
@@ -29,7 +163,7 @@
         </div>
     </div>
     <div class="header-mobile-links">
-        <img src="logo.png" width="100" alt="ExpressWiki Default Template 300x300px">
+        <img src="/content/assets/logo.png" width="100" alt="ExpressWiki Default Template 300x300px">
         <br>
         <a class="header-mobile-menu-link dmargin" href="#" onclick="toggleMobileMenu();">Close Menu</a>
         <a class="header-mobile-menu-link" href="/wiki/Main Page">Main Page</a>

@@ -1,0 +1,10 @@
+This is a default Main Page for the ExpressWiki template.
+It includes markdown help
+
+! Header 1
+!! Header 2
+!!! Header 3
+
+`code block`
+
+_italic_ *bold* *_bold italic_* ~strikethrough~
